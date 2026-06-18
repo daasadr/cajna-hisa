@@ -18,7 +18,7 @@ const sl = {
   stats: {
     items: [
       { value: 150, suffix: '+', label: 'vrst čaja' },
-      { value: 9, suffix: '', label: 'let tradicije' },
+      { value: -1, suffix: '', label: 'let tradicije' },
       { value: 200, suffix: '+', label: 'delavnic' },
       { value: 100, suffix: '%', label: 'naravno' },
     ],
@@ -122,6 +122,33 @@ const sl = {
     mapNote: 'Točen naslov sporočimo ob rezervaciji',
     mapTitle: 'Ljubljana centrum',
   },
+  events: {
+    tag: 'Prihajajoči dogodki',
+    title: 'Kaj nas čaka',
+    sub: 'Pridružite se nam na posebnih skupnostnih dogodkih v Čajni hiši Dolina.',
+    registerBtn: 'Prijavi se',
+    free: 'Brezplačno',
+    items: [
+      {
+        emoji: '🏺',
+        type: 'Skupnostni dogodek',
+        title: 'Bazar čajnega pribora',
+        desc: 'Prinesite čajnike, skodelice ali pribor, ki jih ne potrebujete več, in jih zamenjajte, podarite ali prodajte drugim ljubiteljem čaja. Prijazen, neformalen srečanje skupnosti.',
+      },
+      {
+        emoji: '✏️',
+        type: 'Ustvarjalna delavnica',
+        title: 'Risarska delavnica: čajno mrtvo naravo',
+        desc: 'Skupaj bomo skicirali čajnike, skodelice in aranžmaje v sproščenem vzdušju ob skodelici čaja. Primerno za vse ravni — predznanje ni potrebno.',
+      },
+      {
+        emoji: '📖',
+        type: 'Literarni večer',
+        title: 'Večer avtorske poezije',
+        desc: 'Preberite svoje pesmi sočajnolastnikom in poslušajte druge. Prijavite svojo pesem do dva dni pred večerom — čaj in zákusek za pesnike brezplačno.',
+      },
+    ],
+  },
   footer: {
     disclaimer: 'Ta spletna stran je demonstracijski primer.',
     disclaimerEn: 'This is a fictional portfolio project.',
@@ -147,7 +174,7 @@ const en: typeof sl = {
   stats: {
     items: [
       { value: 150, suffix: '+', label: 'tea varieties' },
-      { value: 9, suffix: '', label: 'years of tradition' },
+      { value: -1, suffix: '', label: 'years of tradition' },
       { value: 200, suffix: '+', label: 'workshops' },
       { value: 100, suffix: '%', label: 'natural' },
     ],
@@ -250,6 +277,33 @@ const en: typeof sl = {
     },
     mapNote: 'Exact address provided upon reservation',
     mapTitle: 'Ljubljana city centre',
+  },
+  events: {
+    tag: 'Upcoming events',
+    title: "What's coming",
+    sub: 'Join us for special community events at Tea House Dolina.',
+    registerBtn: 'Register',
+    free: 'Free',
+    items: [
+      {
+        emoji: '🏺',
+        type: 'Community event',
+        title: 'Tea ware bazaar',
+        desc: 'Bring tea pots, cups or accessories you no longer need and swap, gift or sell them to fellow tea lovers. A friendly, informal community gathering.',
+      },
+      {
+        emoji: '✏️',
+        type: 'Creative workshop',
+        title: 'Drawing workshop: tea still life',
+        desc: 'We will sketch teapots, cups and arrangements together in a relaxed atmosphere over a cup of tea. Suitable for all levels — no prior experience needed.',
+      },
+      {
+        emoji: '📖',
+        type: 'Literary evening',
+        title: 'Author poetry reading',
+        desc: 'Read your poems to fellow tea drinkers and listen to others. Register your poem up to two days before the evening — tea and pastry free for poets.',
+      },
+    ],
   },
   footer: {
     disclaimer: 'Ta spletna stran je demonstracijski primer.',

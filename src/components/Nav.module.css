@@ -7,6 +7,45 @@
   transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
 }
 
+/* ── White nav over dark hero ── */
+.nav:not(.scrolled) .logoMain {
+  color: #fff;
+}
+
+.nav:not(.scrolled) .logoSub {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.nav:not(.scrolled) .link {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.nav:not(.scrolled) .link::after {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.nav:not(.scrolled) .link:hover {
+  color: #fff;
+}
+
+.nav:not(.scrolled) .langBtn {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.nav:not(.scrolled) .langBtn:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: #fff;
+}
+
+.nav:not(.scrolled) .activeLang {
+  color: #fff;
+}
+
+.nav:not(.scrolled) .bar {
+  background: rgba(255, 255, 255, 0.92);
+}
+
 .scrolled {
   background: rgba(250, 248, 244, 0.94);
   backdrop-filter: blur(12px);

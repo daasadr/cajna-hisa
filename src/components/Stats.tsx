@@ -46,9 +46,17 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   );
 }
 
+const FOUNDED = 2015;
+
 export default function Stats() {
   const { lang } = useLanguage();
-  const items = translations[lang].stats.items;
+  const rawItems = translations[lang].stats.items;
+
+  const items = rawItems.map((item) =>
+    item.value === -1
+      ? { ...item, value: new Date().getFullYear() - FOUNDED }
+      : item
+  );
 
   return (
     <section className={styles.stats}>
