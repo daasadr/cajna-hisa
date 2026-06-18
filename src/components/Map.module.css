@@ -1,0 +1,27 @@
+.mapWrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(45, 90, 61, 0.1);
+}
+
+.map {
+  width: 100%;
+  height: 280px;
+}
+
+:global(.leaflet-container) {
+  font-family: var(--font-body);
+}
+
+:global(.leaflet-popup-content-wrapper) {
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+:global(.leaflet-popup-content) {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--txt-main);
+  line-height: 1.6;
+}

@@ -1,0 +1,167 @@
+.section {
+  padding: var(--section-py) 0;
+  background: var(--bg-base);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.images {
+  position: relative;
+  min-height: 520px;
+}
+
+.imgMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(45, 90, 61, 0.18);
+}
+
+.imgMain img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.imgOverlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 52%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 4px solid var(--bg-base);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+}
+
+.imgOverlay img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: var(--tea-green);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(74, 124, 89, 0.4);
+}
+
+.badgeYear {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+}
+
+.badgeLabel {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+}
+
+.text {
+  padding: 1rem 0;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: var(--txt-hi);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.para {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--txt-main);
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sigLine {
+  width: 2.5rem;
+  height: 1px;
+  background: var(--tea-green);
+}
+
+.sigName {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--txt-hi);
+  font-style: italic;
+}
+
+.sigTitle {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--txt-mid);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .images {
+    min-height: 380px;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .imgMain img {
+    height: 320px;
+  }
+
+  .imgOverlay img {
+    height: 160px;
+  }
+
+  .badge {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .images {
+    min-height: 320px;
+  }
+  .imgMain img {
+    height: 260px;
+  }
+}

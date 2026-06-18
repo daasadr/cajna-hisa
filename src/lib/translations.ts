@@ -1,0 +1,262 @@
+export type Lang = 'sl' | 'en';
+
+const sl = {
+  nav: {
+    about: 'O nas',
+    menu: 'Čaji',
+    gallery: 'Galerija',
+    workshops: 'Delavnice',
+    contact: 'Kontakt',
+  },
+  hero: {
+    title: 'Čajna hiša Dolina',
+    subtitle: 'Ljubljana, Slovenija',
+    claim: 'Prostor, kjer čas počasi teče — kot čaj v skodelici.',
+    cta1: 'Rezerviraj mizo',
+    cta2: 'Naši čaji',
+  },
+  stats: {
+    items: [
+      { value: 150, suffix: '+', label: 'vrst čaja' },
+      { value: 9, suffix: '', label: 'let tradicije' },
+      { value: 200, suffix: '+', label: 'delavnic' },
+      { value: 100, suffix: '%', label: 'naravno' },
+    ],
+  },
+  about: {
+    tag: 'Naša zgodba',
+    title: 'Čaj kot način življenja',
+    p1: 'Čajna hiša Dolina je bila rojena leta 2015, ko se je Ana Dolinar vrnila s potovanj po Japonski, Kitajski in Tajvanu s kovčkom polnim čajevih listov in srcem polnim navdušenja.',
+    p2: 'Naše poslanstvo je preprosto: prinesti avtentično čajno kulturo v srce Ljubljane, jo združiti z bogastvom gorenjskih zelišč in ustvariti prostor, kjer se vsakodnevni ritem umiri.',
+    p3: 'Danes ponujamo več kot 150 vrst čajev iz vsega sveta, redne čajne ceremonije in delavnice za vse, ki bi radi poglobili svoje razumevanje tega starodavnega napitka.',
+  },
+  menu: {
+    tag: 'Ponudba',
+    title: 'Naši čaji',
+    cta: 'Izvedi več',
+    categories: [
+      {
+        icon: '🍃',
+        name: 'Zeleni čaji',
+        desc: 'Nežni, sveži okusi z Japonske in Kitajske. Gyokuro, Sencha, Longjing — tradicija v vsakem požirku.',
+      },
+      {
+        icon: '☁️',
+        name: 'Beli čaji',
+        desc: 'Najdelikatnejši čaji sveta. Minimalna predelava ohrani naravno sladkost in subtilno aromo.',
+      },
+      {
+        icon: '🌀',
+        name: 'Oolong čaji',
+        desc: 'Med zelenim in črnim — kompleksni, večplastni okusi. Vsak požirek odkriva novo plat.',
+      },
+      {
+        icon: '🌿',
+        name: 'Zeliščni čaji',
+        desc: 'Lokalna gorenjska zelišča, naravno sušena. Sivka, šentjanževka, meta — narava v skodelici.',
+      },
+    ],
+  },
+  gallery: {
+    tag: 'Galerija',
+    title: 'Utrinki iz čajne hiše',
+    filterAll: 'Vse',
+    filters: ['Notranjost', 'Čaji & skodelice', 'Delavnice', 'Degustacije'],
+  },
+  workshops: {
+    tag: 'Delavnice',
+    title: 'Čajne izkušnje',
+    durationLabel: 'Trajanje',
+    spotsLabel: 'Mesta',
+    items: [
+      {
+        title: 'Uvod v čajno kulturo',
+        desc: 'Spoznajte osnove čajnega sveta — od porekla lista do pravilne priprave. Primerno za začetnike in radovedne.',
+        price: '35 €',
+        duration: '2 uri',
+        spots: '8 mest',
+        cta: 'Rezerviraj',
+      },
+      {
+        title: 'Japonska čajna ceremonija',
+        desc: 'Doživite avtentično japonsko čajno ceremonijo z matcho. Zen vzdušje in globoko spoštovanje do čaja.',
+        price: '55 €',
+        duration: '3 ure',
+        spots: '6 mest',
+        cta: 'Rezerviraj',
+      },
+      {
+        title: 'Zeliščni čaj iz narave',
+        desc: 'Sprehod po gorenjskih travnikih in nabiralništvo zelišč, nato skupna priprava domačega zeliščnega čaja.',
+        price: '45 €',
+        duration: '4 ure',
+        spots: '10 mest',
+        cta: 'Rezerviraj',
+      },
+    ],
+  },
+  contact: {
+    tag: 'Kontakt',
+    title: 'Obiščite nas',
+    form: {
+      name: 'Vaše ime',
+      email: 'E-naslov',
+      topic: 'Tema sporočila',
+      topicOptions: ['Rezervacija mize', 'Prijava na delavnico', 'Naročilo čaja', 'Splošno vprašanje'],
+      message: 'Vaše sporočilo',
+      submit: 'Pošlji sporočilo',
+      success: 'Hvala! Vaše sporočilo je bilo poslano. Odgovorili vam bomo v 24 urah.',
+      sending: 'Pošiljanje…',
+    },
+    info: {
+      addressLabel: 'Naslov',
+      address: 'Ljubljana, Staro mestno jedro',
+      phoneLabel: 'Telefon',
+      phone: '+386 40 123 456',
+      emailLabel: 'E-pošta',
+      email: 'pozdravljeni@cajna-dolina.si',
+      hoursLabel: 'Odpiralni čas',
+      hoursWeek: 'Pon–Pet: 9:00–20:00',
+      hoursWeekend: 'Sob–Ned: 10:00–20:00',
+    },
+    mapNote: 'Točen naslov sporočimo ob rezervaciji',
+    mapTitle: 'Ljubljana centrum',
+  },
+  footer: {
+    disclaimer: 'Ta spletna stran je demonstracijski primer.',
+    disclaimerEn: 'This is a fictional portfolio project.',
+    rights: '© 2024 Čajna hiša Dolina. Vse pravice pridržane.',
+  },
+};
+
+const en: typeof sl = {
+  nav: {
+    about: 'About',
+    menu: 'Teas',
+    gallery: 'Gallery',
+    workshops: 'Workshops',
+    contact: 'Contact',
+  },
+  hero: {
+    title: 'Tea House Dolina',
+    subtitle: 'Ljubljana, Slovenia',
+    claim: 'A place where time flows slowly — like tea in a cup.',
+    cta1: 'Reserve a table',
+    cta2: 'Our teas',
+  },
+  stats: {
+    items: [
+      { value: 150, suffix: '+', label: 'tea varieties' },
+      { value: 9, suffix: '', label: 'years of tradition' },
+      { value: 200, suffix: '+', label: 'workshops' },
+      { value: 100, suffix: '%', label: 'natural' },
+    ],
+  },
+  about: {
+    tag: 'Our story',
+    title: 'Tea as a way of life',
+    p1: 'Tea House Dolina was born in 2015, when Ana Dolinar returned from travels through Japan, China and Taiwan with a suitcase full of tea leaves and a heart full of inspiration.',
+    p2: 'Our mission is simple: to bring authentic tea culture to the heart of Ljubljana, combine it with the richness of Gorenjska herbs and create a space where the everyday rhythm slows down.',
+    p3: 'Today we offer over 150 varieties of tea from around the world, regular tea ceremonies and workshops for all who want to deepen their understanding of this ancient drink.',
+  },
+  menu: {
+    tag: 'Our offer',
+    title: 'Our teas',
+    cta: 'Learn more',
+    categories: [
+      {
+        icon: '🍃',
+        name: 'Green teas',
+        desc: 'Gentle, fresh flavours from Japan and China. Gyokuro, Sencha, Longjing — tradition in every sip.',
+      },
+      {
+        icon: '☁️',
+        name: 'White teas',
+        desc: 'The most delicate teas in the world. Minimal processing preserves the natural sweetness and subtle aroma.',
+      },
+      {
+        icon: '🌀',
+        name: 'Oolong teas',
+        desc: 'Between green and black — complex, layered flavours. Each sip reveals a new dimension.',
+      },
+      {
+        icon: '🌿',
+        name: 'Herbal teas',
+        desc: "Local Gorenjska herbs, naturally dried. Lavender, St. John's wort, mint — nature in a cup.",
+      },
+    ],
+  },
+  gallery: {
+    tag: 'Gallery',
+    title: 'Glimpses from the tea house',
+    filterAll: 'All',
+    filters: ['Interior', 'Teas & cups', 'Workshops', 'Tastings'],
+  },
+  workshops: {
+    tag: 'Workshops',
+    title: 'Tea experiences',
+    durationLabel: 'Duration',
+    spotsLabel: 'Spots',
+    items: [
+      {
+        title: 'Introduction to tea culture',
+        desc: 'Discover the basics of the tea world — from the origin of the leaf to proper preparation. Suitable for beginners.',
+        price: '€35',
+        duration: '2 hours',
+        spots: '8 spots',
+        cta: 'Reserve',
+      },
+      {
+        title: 'Japanese tea ceremony',
+        desc: 'Experience an authentic Japanese tea ceremony with matcha. Zen atmosphere and deep respect for tea.',
+        price: '€55',
+        duration: '3 hours',
+        spots: '6 spots',
+        cta: 'Reserve',
+      },
+      {
+        title: 'Herbal tea from nature',
+        desc: 'A walk through Gorenjska meadows and herb picking, then communal preparation of homemade herbal tea.',
+        price: '€45',
+        duration: '4 hours',
+        spots: '10 spots',
+        cta: 'Reserve',
+      },
+    ],
+  },
+  contact: {
+    tag: 'Contact',
+    title: 'Visit us',
+    form: {
+      name: 'Your name',
+      email: 'Email address',
+      topic: 'Subject',
+      topicOptions: ['Table reservation', 'Workshop registration', 'Tea order', 'General enquiry'],
+      message: 'Your message',
+      submit: 'Send message',
+      success: 'Thank you! Your message has been sent. We will reply within 24 hours.',
+      sending: 'Sending…',
+    },
+    info: {
+      addressLabel: 'Address',
+      address: 'Ljubljana, Old Town',
+      phoneLabel: 'Phone',
+      phone: '+386 40 123 456',
+      emailLabel: 'Email',
+      email: 'pozdravljeni@cajna-dolina.si',
+      hoursLabel: 'Opening hours',
+      hoursWeek: 'Mon–Fri: 9:00–20:00',
+      hoursWeekend: 'Sat–Sun: 10:00–20:00',
+    },
+    mapNote: 'Exact address provided upon reservation',
+    mapTitle: 'Ljubljana city centre',
+  },
+  footer: {
+    disclaimer: 'Ta spletna stran je demonstracijski primer.',
+    disclaimerEn: 'This is a fictional portfolio project.',
+    rights: '© 2024 Tea House Dolina. All rights reserved.',
+  },
+};
+
+export const translations = { sl, en } as const;
+export type TranslationKeys = typeof sl;
