@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
 import { translations } from '@/lib/translations';
 import styles from './Nav.module.css';
@@ -17,11 +18,11 @@ export default function Nav() {
   }, []);
 
   const links = [
-    { href: '#o-nas', label: t.about },
-    { href: '#caji', label: t.menu },
-    { href: '#galerija', label: t.gallery },
-    { href: '#delavnice', label: t.workshops },
-    { href: '#kontakt', label: t.contact },
+    { href: '/#o-nas', label: t.about },
+    { href: '/#caji', label: t.menu },
+    { href: '/#galerija', label: t.gallery },
+    { href: '/#delavnice', label: t.workshops },
+    { href: '/#kontakt', label: t.contact },
   ];
 
   const handleLink = () => setOpen(false);
@@ -29,16 +30,16 @@ export default function Nav() {
   return (
     <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
-        <a href="#" className={styles.logo} aria-label="Čajna hiša Dolina – domov">
+        <Link href="/" className={styles.logo} aria-label="Čajna hiša Dolina – domov">
           <span className={styles.logoMain}>Dolina</span>
           <span className={styles.logoSub}>Čajna hiša</span>
-        </a>
+        </Link>
 
         <nav className={styles.links} aria-label="Glavna navigacija">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className={styles.link}>
+            <Link key={l.href} href={l.href} className={styles.link}>
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -72,14 +73,14 @@ export default function Nav() {
       >
         <nav className={styles.mobileLinks}>
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className={styles.mobileLink}
               onClick={handleLink}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <button className={styles.mobileLang} onClick={toggle}>
             {lang === 'sl' ? 'English' : 'Slovenščina'}
