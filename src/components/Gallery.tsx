@@ -17,14 +17,14 @@ const PHOTOS = [
   { id: 7,  file: 'onanacha-matcha-847918.jpg',                       category: 1 },
   { id: 8,  file: 'dungthuyvunguyen-matcha-latte-2356772_1920.jpg',   category: 1 },
   // Delavnice / Workshops
-  { id: 9,  file: 'gallery-7.png',                                    category: 2 },
+  { id: 9,  file: 'gallery-7.webp',                                   category: 2 },
   { id: 10, file: 'gallery-8.jpg',                                    category: 2 },
   { id: 11, file: 'gallery-9.jpg',                                    category: 2 },
   // Degustacije / Tastings
-  { id: 12, file: 'gallery-10.png',                                   category: 3 },
+  { id: 12, file: 'gallery-10.webp',                                  category: 3 },
   { id: 13, file: 'gallery-11.jpg',                                   category: 3 },
   { id: 14, file: 'joannakkphotography-chocolate-cake-4446608_1920.jpg', category: 3 },
-  { id: 15, file: 'onanacha-sweets-847920_1920.jpg',                  category: 3 },
+  { id: 15, file: 'onanacha-sweets-847920_1920(1).jpg',               category: 3 },
 ];
 
 export default function Gallery() {
