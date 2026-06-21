@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/lib/LanguageContext';
 import { translations } from '@/lib/translations';
 import styles from './Nav.module.css';
@@ -8,12 +9,15 @@ import styles from './Nav.module.css';
 export default function Nav() {
   const { lang, toggle } = useLanguage();
   const t = translations[lang].nav;
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -28,7 +32,7 @@ export default function Nav() {
   const handleLink = () => setOpen(false);
 
   return (
-    <header className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.nav} ${(scrolled || !isHome) ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} aria-label="Čajna hiša Dolina – domov">
           <span className={styles.logoMain}>Dolina</span>
