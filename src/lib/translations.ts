@@ -29,6 +29,7 @@ const sl = {
     p1: 'Čajna hiša Dolina je bila rojena leta 2015, ko se je Ana Dolinar vrnila s potovanj po Japonski, Kitajski in Tajvanu s kovčkom polnim čajevih listov in srcem polnim navdušenja.',
     p2: 'Naše poslanstvo je preprosto: prinesti avtentično čajno kulturo v srce Ljubljane, jo združiti z bogastvom gorenjskih zelišč in ustvariti prostor, kjer se vsakodnevni ritem umiri.',
     p3: 'Danes ponujamo več kot 150 vrst čajev iz vsega sveta, redne čajne ceremonije in delavnice za vse, ki bi radi poglobili svoje razumevanje tega starodavnega napitka.',
+    policy: 'Naš prostor je posvečen izključno čaju, naravnim napitkom in zdravi prehrani. Vodnih pip in tobačnih izdelkov pri nas ni — niti v ponudbi, niti v prostorih. To je naša odločitev in del naše identitete.',
   },
   menu: {
     tag: 'Ponudba',
@@ -185,6 +186,7 @@ const en: typeof sl = {
     p1: 'Tea House Dolina was born in 2015, when Ana Dolinar returned from travels through Japan, China and Taiwan with a suitcase full of tea leaves and a heart full of inspiration.',
     p2: 'Our mission is simple: to bring authentic tea culture to the heart of Ljubljana, combine it with the richness of Gorenjska herbs and create a space where the everyday rhythm slows down.',
     p3: 'Today we offer over 150 varieties of tea from around the world, regular tea ceremonies and workshops for all who want to deepen their understanding of this ancient drink.',
+    policy: 'Our space is dedicated exclusively to tea, natural beverages and wholesome food. Hookah pipes and tobacco products are not part of our story — not on our menu, not on our premises. This is our choice and part of who we are.',
   },
   menu: {
     tag: 'Our offer',

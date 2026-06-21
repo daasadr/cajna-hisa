@@ -6,18 +6,25 @@ import { asset } from '@/lib/basePath';
 import styles from './Gallery.module.css';
 
 const PHOTOS = [
-  { id: 1, category: 0 },
-  { id: 2, category: 0 },
-  { id: 3, category: 0 },
-  { id: 4, category: 1 },
-  { id: 5, category: 1 },
-  { id: 6, category: 1 },
-  { id: 7, category: 2 },
-  { id: 8, category: 2 },
-  { id: 9, category: 2 },
-  { id: 10, category: 3 },
-  { id: 11, category: 3 },
-  { id: 12, category: 3 },
+  // Notranjost / Interior
+  { id: 1,  file: 'gallery-1.jpg',                                    category: 0 },
+  { id: 2,  file: 'gallery-2.jpg',                                    category: 0 },
+  { id: 3,  file: 'gallery-3.jpg',                                    category: 0 },
+  // Čaji & skodelice / Teas & cups
+  { id: 4,  file: 'gallery-4.jpg',                                    category: 1 },
+  { id: 5,  file: 'gallery-5.jpg',                                    category: 1 },
+  { id: 6,  file: 'gallery-6.jpg',                                    category: 1 },
+  { id: 7,  file: 'onanacha-matcha-847918.jpg',                       category: 1 },
+  { id: 8,  file: 'dungthuyvunguyen-matcha-latte-2356772_1920.jpg',   category: 1 },
+  // Delavnice / Workshops
+  { id: 9,  file: 'gallery-7.png',                                    category: 2 },
+  { id: 10, file: 'gallery-8.jpg',                                    category: 2 },
+  { id: 11, file: 'gallery-9.jpg',                                    category: 2 },
+  // Degustacije / Tastings
+  { id: 12, file: 'gallery-10.png',                                   category: 3 },
+  { id: 13, file: 'gallery-11.jpg',                                   category: 3 },
+  { id: 14, file: 'joannakkphotography-chocolate-cake-4446608_1920.jpg', category: 3 },
+  { id: 15, file: 'onanacha-sweets-847920_1920.jpg',                  category: 3 },
 ];
 
 export default function Gallery() {
@@ -57,6 +64,8 @@ export default function Gallery() {
     };
   }, [lightbox, prev, next]);
 
+  const currentPhoto = PHOTOS.find((p) => p.id === lightbox);
+
   return (
     <section id="galerija" className={styles.section}>
       <div className="container">
@@ -90,11 +99,10 @@ export default function Gallery() {
               className={`${styles.item} reveal reveal-delay-${(i % 4) + 1}`}
               onClick={() => setLightbox(photo.id)}
               aria-label={`Odpri sliko ${photo.id}`}
-              style={{ '--i': i } as React.CSSProperties}
             >
               <div className={styles.imgWrap}>
                 <img
-                  src={asset(`/images/gallery-${photo.id}.jpg`)}
+                  src={asset(`/images/${photo.file}`)}
                   alt=""
                   decoding="async"
                   loading="lazy"
@@ -111,7 +119,7 @@ export default function Gallery() {
         </div>
       </div>
 
-      {lightbox !== null && (
+      {lightbox !== null && currentPhoto && (
         <div
           className={styles.lightbox}
           onClick={closeLightbox}
@@ -119,23 +127,15 @@ export default function Gallery() {
           aria-modal="true"
           aria-label="Galerija"
         >
-          <button
-            className={styles.lbClose}
-            onClick={closeLightbox}
-            aria-label="Zapri"
-          >
-            ×
-          </button>
+          <button className={styles.lbClose} onClick={closeLightbox} aria-label="Zapri">×</button>
           <button
             className={`${styles.lbNav} ${styles.lbPrev}`}
             onClick={(e) => { e.stopPropagation(); prev(); }}
             aria-label="Prejšnja slika"
-          >
-            ‹
-          </button>
+          >‹</button>
           <div className={styles.lbImgWrap} onClick={(e) => e.stopPropagation()}>
             <img
-              src={asset(`/images/gallery-${lightbox}.jpg`)}
+              src={asset(`/images/${currentPhoto.file}`)}
               alt=""
               decoding="async"
               className={styles.lbImg}
@@ -145,9 +145,7 @@ export default function Gallery() {
             className={`${styles.lbNav} ${styles.lbNext}`}
             onClick={(e) => { e.stopPropagation(); next(); }}
             aria-label="Naslednja slika"
-          >
-            ›
-          </button>
+          >›</button>
         </div>
       )}
     </section>

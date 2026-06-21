@@ -46,6 +46,11 @@ export default function About() {
               <p className={styles.sigTitle}>Ustanoviteljica</p>
             </div>
           </div>
+
+          <blockquote className={`${styles.policy} reveal reveal-delay-4`}>
+            <span className={styles.policyLeaf} aria-hidden="true">🍃</span>
+            <p className={styles.policyText}>{t.policy}</p>
+          </blockquote>
         </div>
       </div>
     </section>
